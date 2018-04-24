@@ -1,0 +1,12 @@
+<div style="width: 100%">
+    <ul class="w3-pagination">
+        <li ng-disabled="deshabilitarPaginiaInicial()"><a href="#" ng-click="irPrimerPagina()"><i class="fa fa-chevron-left" aria-hidden="true"></i><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
+        <li ng-disabled="deshabilitarPaginiaInicial()"><a href="#" ng-click="anteriorPagina()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
+        <li ng-repeat="i in Paginador"><a ng-class="i == paginaActual ? 'w3-red' : '' " href="#" ng-click="irPagina(i)">{{i}}</a></li>
+        <li ng-disabled="deshabilitarPaginaFinal()">
+        	<a href="#" ng-click="siguientePagina()"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </li>
+        <li ng-disabled="deshabilitarPaginaFinal()"><a href="#" ng-click="irUltimaPagina()"><i class="fa fa-chevron-right" aria-hidden="true"></i><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+        <li> <div style="float: left;     padding-top: 7px;">desde el {{inicioPagina+1}} hasta el {{finPagina}} de un total de {{data.length}}</div></li>
+    </ul>   
+</div>
